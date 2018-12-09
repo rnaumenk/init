@@ -1,0 +1,9 @@
+ifconfig en0 | grep "flags" | cut -d " " -f 1 -f 2 | cut -d "<" -f 1
+ifconfig en0 | grep "flags" | cut -d " " -f 3 -f 4
+ifconfig en0 | grep "options" | cut -d "<" -f 1 | tr -d '\n' | cut -d "	" -f 2
+ifconfig en0 | grep "ether " | tr -d "	"
+ifconfig en0 | grep "inet6" | tr -d "	"
+ifconfig en0 | grep "inet " | tr -d "	"
+ifconfig en0 | grep "nd6 " | tr -d "	" | cut -d "<" -f 1
+ifconfig en0 | grep "media" | tr -d "	" | sed "s/<full-duplex,energy-efficient-ethernet>//g"
+ifconfig en0 | grep "status" | tr -d "	"

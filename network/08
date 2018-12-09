@@ -1,0 +1,13 @@
+write "nslookup slash16.org"
+take address of slash16.org
+write "whois 13.32.118.235"
+
+Amazon AWS Network Operations
+
+
+
+OR use https://hostadvice.com/tools/whois/
+
+Amazon Web Services (AWS)
+
+OR probably by dig slash16.org

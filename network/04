@@ -1,0 +1,2 @@
+netstat -nr | grep "default" | grep "UGSc"
+#route -n get default | awk '/gateway/{print $1,$2}'

@@ -1,0 +1,14 @@
+sudo tail -f /var/log/syslog &
+
+
+#nohup command &     - sends the process into the background and write down the text output into the file nohup.out
+# https://unix.stackexchange.com/questions/103731/run-a-command-without-making-me-wait
+
+#jobs
+#kill `jobs -ps`
+#kill -9 `jobs -ps` TERMINAL OFF
+#pkill
+#sudo reboot
+# shutdown -h now     - now can be changed to the exact time
+# https://superuser.com/questions/161531/how-to-kill-all-processes-in-linux
+# https://serverfault.com/questions/240155/how-can-i-kill-all-stopped-jobs

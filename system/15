@@ -1,0 +1,8 @@
+sudo pkill tail
+
+
+# kill $!               - to kill the most recently backgrounded job (nonrepeatable)
+# kill $1               - kill the first job
+# kill %%               - kill the most recent backgrounded job (repeatable)
+# kill %+ OR kill %-
+# https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process

@@ -1,0 +1,4 @@
+ps aux | grep -e /usr/sbin/sshd | grep -v grep | tr -s " "
+
+#cat /var/run/sshd.pid
+#ps aux | grep -e /usr/sbin/sshd | grep -v grep | tr -s " " | cut -d " " -f2

@@ -1,0 +1,7 @@
+#dig +short -x 10.51.1.81
+
+!!! ldap-proxy.42.fr. !!!
+
+#nslookup 127.0.0.1 (ln0 inet)
+#1.0.0.127.in-addr.arpa	name = localhost.
+#.in-addr.arpa - If you see an address in your logging with a format similar to ".in-addr.arpa", this is a reverse dns lookup 

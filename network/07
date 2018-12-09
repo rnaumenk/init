@@ -1,0 +1,4 @@
+nslookup slash16.org 8.8.8.8
+
+#dig @8.8.8.8 slash16.org
+#https://coolestguidesontheplanet.com/use-a-different-dns-nameserver-with-dig-nslookup-and-hard-code/

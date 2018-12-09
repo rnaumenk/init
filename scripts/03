@@ -1,0 +1,13 @@
+if [ ! -z $1 ]; then
+sudo du -c $1 | sort -n -r | tr -s [:blank:] " " | grep -v total
+else
+echo "give me a path"
+fi
+
+
+# sudo find $1 -type f -print0 | sudo du --files0-from=- | sort -hr
+
+# http://www.dreamsyssoft.com/unix-shell-scripting/ifelse-tutorial.php
+# https://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty
+# https://www.linux.com/learn/writing-simple-bash-script
+# https://en.wikipedia.org/wiki/Regular_expression

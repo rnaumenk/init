@@ -1,0 +1,3 @@
+sudo hostname NEW_NAME
+
+#hostnamectl set-hostname NEW_NAME (permanent change)

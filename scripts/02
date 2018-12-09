@@ -1,0 +1,8 @@
+crontab -l > ~/mycrontask
+echo "apt-get update > /var/log/update_script.log" > ~/myscript
+echo "apt-get upgrade >> /var/log/update_script.log" >> ~/myscript
+sudo sh ~/myscript
+echo "00 4 * * 1 sudo sh ~/myscript" >> ~/mycrontask
+crontab -r
+crontab ~/mycrontask
+rm -f ~/mycrontask

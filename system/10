@@ -1,0 +1,3 @@
+sudo fdisk -l
+
+# http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/

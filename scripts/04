@@ -1,0 +1,30 @@
+crontab -l > ~/mycronfile
+echo "if [ ! -f ~/crontab.log ]; then
+echo \"SomeShit\" > ~/crontab.log
+fi
+s1=\"\$(md5sum /etc/crontab)\"
+s2=\"\$(cat ~/crontab.log)\"
+date=\`date '+%Y-%m-%d %H:%M:%S'\`
+if [ \"\$s1\" != \"\$s2\" ]; then
+md5sum /etc/crontab > ~/crontab.log
+echo \"/etc/crontab has been modified on \$date\" | mail -s \"modified crontab\" root ; fi" > ~/mycrontask
+echo "00 0 * * * sh ~/mycrontask >/dev/null 2>&1" >> ~/mycronfile
+crontab -r
+crontab ~/mycronfile
+rm -f ~/mycronfile
+sh ~/mycrontask
+
+
+
+# apt-get install mailutils
+
+
+#sudo - s      Permanent sudo
+
+
+# !!! https://www.binarytides.com/linux-mail-command-examples/
+
+# https://unix.stackexchange.com/questions/163352/what-does-dev-null-21-mean-in-this-article-of-crontab-basics
+# http://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/
+# https://unix.stackexchange.com/questions/171860/how-to-monitor-the-integrity-of-a-script-that-is-running
+# https://stackoverflow.com/questions/1401482/yyyy-mm-dd-format-date-in-shell-script

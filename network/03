@@ -1,0 +1,6 @@
+ifconfig en1 | awk '/en1/{print $1,$2}' | cut -d "<" -f 1
+ifconfig en1 | awk '/ether/{print $2}'
+
+# 1. show multiple lines with [grep -B n] (show n lines befor key word) [ grep -A n] (show n lines after key word)
+# [grep -C n] (show n lines before and after key word)
+# 2. show only first n  [matches grep -m n]
